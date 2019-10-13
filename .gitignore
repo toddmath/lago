@@ -57,3 +57,7 @@ typings/
 # dotenv environment variables file
 .env
 
+# Reason
+.merlin
+.bsb.lock
+/lib/bs/

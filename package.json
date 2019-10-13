@@ -4,6 +4,9 @@
   "description": "Data structures and algorithms library for JavaScript.",
   "main": "lib/index.js",
   "scripts": {
+    "build": "bsb -make-world",
+    "start": "bsb -make-world -w",
+    "clean": "bsb -clean-world",
     "check-all": "yarn prettier && yarn lint && yarn test",
     "check-all:ci": "yarn prettier && yarn lint && yarn run test:ci",
     "lint": "eslint .",
@@ -11,7 +14,7 @@
     "prettier:diff": "prettier --config .prettierrc --list-different 'lib/**/*.js'",
     "test": "jest --coverage",
     "test:ci": "jest --coverage --runInBand",
-    "start": "jest --coverage --watch"
+    "test:start": "jest --coverage --watch"
   },
   "repository": "git+https://github.com/yangshun/lago.git",
   "keywords": [
@@ -29,6 +32,7 @@
     "babel-jest": "^24.9.0",
     "babel-preset-env": "^7.0.0-beta.3",
     "babel-plugin-transform-builtin-extend": "^1.1.2",
+    "bs-platform": "^5.0.4",
     "eslint": "^6.5.1",
     "eslint-config-airbnb-base": "^12.1.0",
     "eslint-config-prettier": "^2.6.0",
